@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <div class="header-container">
+    <img src="pokeball.webp" alt="Pokeball image" width="50" height="auto">
+    <h1>Pokédex Manager</h1>
+    <img src="pokeball.webp" alt="Pokeball image" width="50" height="auto">
+    </div>
+
+        <!-- Display Pokémon Table -->
+        <table id="pokemon-table">
+            <thead>
+                <tr>
+                    <th>Pokedex ID</th>
+                    <th>Name</th>
+                    <th>Type 1</th>
+                    <th>Type 2</th>
+                    <th>Base Stat Total</th>
+                    <th>HP</th>
+                    <th>Attack</th>
+                    <th>Defense</th>
+                    <th>Special Attack</th>
+                    <th>Special Defense</th>
+                    <th>Speed</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dynamic Content -->
+            </tbody>
+        </table>
+
+        <!-- Add Pokémon Form -->
+        <h2>Add a new Pokémon</h2>
+        <form id="add-pokemon-form">
+            <input type="number" id="dexid" placeholder="Pokedex ID" required>
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="text" id="type1" placeholder="Type 1" required>
+            <input type="text" id="type2" placeholder="Type 2" required>
+            <input type="number" id="bst" placeholder="Base Stat Total" required>
+            <input type="number" id="hp" placeholder="HP" required>
+            <input type="number" id="atk" placeholder="Attack" required>
+            <input type="number" id="defen" placeholder="Defense" required>
+            <input type="number" id="spatk" placeholder="Special Attack" required>
+            <input type="number" id="spdef" placeholder="Special Defense" required>
+            <input type="number" id="spe" placeholder="Speed" required>
+            <button type="submit">Add Pokémon</button>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+

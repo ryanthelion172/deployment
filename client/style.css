@@ -1,0 +1,89 @@
+body {
+    background-color: #1b1f3b; /* Dark blue background */
+    font-family: 'Arial', sans-serif;
+    color: #fff; /* Light text for better contrast */
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #2c2f4a; /* Slightly lighter blue for the container */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    display:flex;
+    align-items:center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #ffcb05; /* Pokémon Yellow */
+    text-shadow: 2px 2px 4px #3b4cca; /* Pokémon Blue */
+}
+
+h2 {
+    text-align: center;
+    color: #ffcb05; /* Pokémon Yellow */
+    margin-top: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 2px solid #3b4cca; /* Pokémon Blue */
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #ffcb05; /* Pokémon Yellow */
+    color: #1b1f3b; /* Dark blue text for contrast */
+}
+
+button {
+    background-color: #ffcb05; /* Pokémon Yellow */
+    color: #1b1f3b; /* Dark blue text for contrast */
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #e6b800; /* Slightly darker yellow for hover effect */
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+input {
+    width: 48%;
+    padding: 8px;
+    border: 2px solid #3b4cca; /* Pokémon Blue */
+    border-radius: 5px;
+    background-color: #1b1f3b; /* Dark blue input background */
+    color: #fff; /* White text for contrast */
+}
+
+form button {
+    width: 100%;
+    margin-top: 10px;
+}
+
