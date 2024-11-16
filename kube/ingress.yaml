@@ -1,0 +1,37 @@
+# Ingress for the backend service
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ryan-ingress-backend
+spec:
+  rules:
+    - host: ryan.zorran.tech
+      http:
+        paths:
+          - path: /pokemon 
+            pathType: ImplementationSpecific 
+            backend:
+              service:
+                name: ryan-backend-s
+                port:
+                  number: 8080
+
+---
+
+# Ingress for the frontend service
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ryan-ingress-frontend
+spec:
+  rules:
+    - host: ryan.zorran.tech
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ryan-frontend-s
+                port:
+                  number: 80

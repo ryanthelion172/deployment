@@ -1,0 +1,70 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ryan-frontend-d
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ryan-frontend
+  template:
+    metadata:
+      labels:
+        app: ryan-frontend
+    spec:
+      containers:
+        - name: ryan-frontend
+          image: morganandrus/ryan-frontend:latest
+          ports:
+            - containerPort: 80 
+---
+# Frontend Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: ryan-frontend-s
+spec:
+  selector:
+    app: ryan-frontend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30007   
+  type: NodePort
+
+# Backend Deployment
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ryan-backend-d
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ryan-backend
+  template:
+    metadata:
+      labels:
+        app: ryan-backend
+    spec:
+      containers:
+        - name: ryan-backend
+          image: morganandrus/ryan-backend:latest
+          ports:
+            - containerPort: 8080 
+---
+# Backend Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: ryan-backend-s
+spec:
+  selector:
+    app: ryan-backend
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+  type: ClusterIP 
